@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Change to your default branch name if different
 
+permissions:
+  id-token: write      # Required for OIDC authentication
+  contents: read       # Required for actions/checkout
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
